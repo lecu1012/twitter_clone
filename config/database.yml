@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  template: template0
+
+development:
+  <<: *default
+  database: rails_kadai_development
+
+test:
+  <<: *default
+  database: rails_kadai_test
+
+production:
+  <<: *default
+  database: rails_kadai_production
+  username: rails_kadai
+  password: <%= ENV['RAILS_KADAI_DATABASE_PASSWORD'] %>
