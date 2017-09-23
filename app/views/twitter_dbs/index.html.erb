@@ -1,34 +1,4 @@
-<header class="header clearfix">
-    <nav>
-        <ul class="top_menu_left clearfix">
-            <li><a href="/twitter_dbs"><%= image_tag 'home.png',    :size => '100x50' %></a></li>
-            <li><a href=""><%= image_tag 'moment.png',  :size => '100x50' %></a></li>
-            <li><a href=""><%= image_tag 'tuuti.png',   :size => '100x50' %></a></li>
-            <li><a href=""><%= image_tag 'message.png', :size => '100x50' %></a></li>
-        </ul>
-        
-        <a href="index.html">
-            <%= image_tag 'kurilogo.png', :size => '60x45' %>        
-        </a>
-        <ul class="top_menu_right clearfix">
-            <li><a href=""><%= image_tag 'keyword.png', :size => '100x50' %></a></li>
-            <li><a href=""><%= image_tag 'acount.png',  :size => '100x50' %></a></li>
-            <li><a href="/twitter_dbs/new"><%= image_tag 'twitter.png', :size => '100x50' %></a></li>
-        </ul>
-    </nav>
-</header>
-<div class="wrapper clearfix">
-    <aside class="side_menu_left">
-        <nav>
-            <div class="side_menu_left_acount">
-                <%= image_tag 'acount/plofile.jpg', :size => '280x160', :class => "profile_image" %>
-                <h3>くりりん＠アウトプット</h3>
-            </div>
-            <ul>
-                <li><h3>おすすめトレンド</h3></li>
-            </ul>
-        </nav>
-    </aside>
+
     <article class="content clearfix">
         <% @twitters.reverse_each do |twitter_db| %>
             <table class="content_table">
@@ -49,13 +19,3 @@
             </table>
         <% end %>
     </article>
-    <aside class="side_menu_right">
-        <nav>
-            <ul>
-                <li><h3>おすすめユーザー</h3></li>
-            </ul>
-        </nav>
-    </aside>
-
-</div>
-
